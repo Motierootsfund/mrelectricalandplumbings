@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MR Electrical & Plumbing Solutions (Pty) Ltd provides professional electrical, plumbing, solar geyser, and security/CCTV services across Pretoria, Johannesburg and surrounding areas.">
+  <meta name="theme-color" content="#0a4ed8">
+  <title>MR Electrical & Plumbing Solutions | Professional Work & Lasting Comfort</title>
+  <style>
+    :root{
+      --blue:#0757d9;
+      --blue-2:#0a78ff;
+      --navy:#0b1b35;
+      --red:#e52327;
+      --red-dark:#c9161b;
+      --ink:#172033;
+      --muted:#607087;
+      --paper:#ffffff;
+      --soft:#f5f8fd;
+      --line:#dfe7f1;
+      --shadow:0 20px 60px rgba(18,42,74,.12);
+      --shadow-sm:0 10px 30px rgba(18,42,74,.08);
+      --radius:20px;
+      --radius-sm:14px;
+      --max:1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    :focus-visible{outline:3px solid rgba(7,87,217,.35);outline-offset:3px}
+    ::selection{background:rgba(7,87,217,.18)}
+
+    .container{width:min(calc(100% - 40px),var(--max));margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+    .eyebrow::before{content:"";width:30px;height:3px;border-radius:999px;background:var(--red)}
+    h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.03em}
+    h1{font-size:clamp(2.6rem,7vw,5.1rem);max-width:780px}
+    h2{font-size:clamp(2rem,4vw,3.25rem)}
+    h3{font-size:1.25rem}
+    p{margin:0;color:var(--muted)}
+
+    .topbar{background:#f4f7fc;color:var(--navy);border-bottom:1px solid var(--line);font-size:.84rem}
+    .topbar-inner{display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:38px}
+    .topbar strong{color:var(--navy)}
+    .topbar-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .dot{width:5px;height:5px;border-radius:50%;background:var(--blue);opacity:.5}
+
+    .nav-wrap{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(223,231,241,.92)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;min-width:0}
+    .brand-mark{width:50px;height:50px;flex:0 0 50px}
+    .brand-copy{display:grid;gap:2px;line-height:1.05}
+    .brand-copy strong{font-size:1rem;letter-spacing:-.025em;color:var(--navy)}
+    .brand-copy span{font-size:.67rem;font-weight:800;letter-spacing:.09em;color:var(--red);text-transform:uppercase}
+    .nav-links{display:flex;align-items:center;gap:27px;font-size:.93rem;font-weight:700;color:#32415a}
+    .nav-links a:hover{color:var(--blue)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;font-weight:800;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+    .nav-cta{padding:12px 17px;background:var(--blue);color:#fff;box-shadow:0 10px 26px rgba(7,87,217,.22)}
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px)}
+    .nav-cta:hover{background:#064ac0}
+    .menu-btn{display:none;border:1px solid var(--line);background:#fff;width:44px;height:44px;border-radius:12px}
+
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#f6faff 0%,#fff 54%,#fff7f7 100%);padding:78px 0 54px}
+    .hero::before{content:"";position:absolute;inset:auto -140px -170px auto;width:520px;height:520px;border-radius:50%;background:rgba(7,87,217,.08);filter:blur(4px)}
+    .hero::after{content:"";position:absolute;inset:60px auto auto -210px;width:470px;height:470px;border-radius:50%;background:rgba(229,35,39,.055)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
+    .hero-copy{display:grid;gap:24px}
+    .hero h1 span{color:var(--blue)}
+    .hero h1 em{font-style:normal;color:var(--red)}
+    .hero-lead{font-size:1.08rem;max-width:670px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{padding:14px 20px}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 14px 34px rgba(7,87,217,.24)}
+    .btn-primary:hover{background:#064ac0}
+    .btn-secondary{background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
+    .btn-profile{background:#fff;color:var(--red);border:1px solid rgba(229,35,39,.28);box-shadow:var(--shadow-sm)}
+    .btn-profile:hover{background:#fff5f5;border-color:rgba(229,35,39,.5)}
+    .btn-secondary:hover{border-color:#c8d5e5}
+    .trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px;max-width:660px}
+    .trust-item{background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:15px;padding:12px 13px;min-height:74px;display:grid;align-content:center}
+    .trust-item b{font-size:.9rem;color:var(--navy)}
+    .trust-item span{font-size:.75rem;color:var(--muted)}
+
+    .visual-shell{position:relative;min-height:540px;border-radius:34px;overflow:hidden;background:var(--navy);box-shadow:var(--shadow);isolation:isolate}
+    .visual-shell::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 22%,rgba(28,118,255,.65),transparent 36%),linear-gradient(140deg,#122954,#071328 72%)}
+    .visual-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:35px 35px;opacity:.42}
+    .glow{position:absolute;border-radius:50%;filter:blur(3px);opacity:.7}
+    .glow-a{width:220px;height:220px;background:rgba(229,35,39,.35);top:-50px;right:-40px}
+    .glow-b{width:260px;height:260px;background:rgba(7,120,255,.32);bottom:-80px;left:-80px}
+    .visual-content{position:relative;z-index:2;height:100%;padding:26px;display:flex;flex-direction:column;justify-content:space-between}
+    .visual-badge{align-self:flex-start;display:inline-flex;gap:8px;align-items:center;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.18);color:#fff;font-size:.78rem;font-weight:800}
+    .visual-badge i{width:8px;height:8px;border-radius:50%;background:#69e69b;box-shadow:0 0 0 4px rgba(105,230,155,.12)}
+    .service-orb{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:auto}
+    .orb-card{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.09);backdrop-filter:blur(10px);border-radius:22px;padding:18px;color:#fff;min-height:144px;display:flex;flex-direction:column;justify-content:space-between}
+    .orb-card .icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#fff;color:var(--blue)}
+    .orb-card:nth-child(2) .icon{color:var(--red)}
+    .orb-card:nth-child(3) .icon{color:#f0a300}
+    .orb-card:nth-child(4) .icon{color:#1db56d}
+    .orb-card strong{font-size:.98rem}
+    .orb-card small{font-size:.76rem;color:rgba(255,255,255,.68);display:block;margin-top:2px}
+
+    .stats{padding:18px 0 22px;background:#fff}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm)}
+    .stat{padding:20px 18px;background:#fff;position:relative}
+    .stat:not(:last-child)::after{content:"";position:absolute;right:0;top:20px;bottom:20px;width:1px;background:var(--line)}
+    .stat b{display:block;font-size:1.35rem;color:var(--navy)}
+    .stat span{font-size:.77rem;color:var(--muted)}
+
+    section{padding:94px 0}
+    .section-head{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:end;margin-bottom:38px}
+    .section-head .intro{max-width:575px;justify-self:end}
+    .section-head p{font-size:1rem}
+
+    .about-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:28px}
+    .panel{border:1px solid var(--line);border-radius:26px;background:#fff;box-shadow:var(--shadow-sm)}
+    .about-main{padding:31px;display:grid;gap:26px;background:linear-gradient(145deg,#fff,#f7faff)}
+    .about-main p{font-size:1rem}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{padding:8px 11px;border-radius:999px;background:#eef4ff;color:#164da8;font-size:.78rem;font-weight:800}
+    .about-side{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .value-card{padding:21px;border-radius:22px;background:#eef4ff;color:var(--ink);border:1px solid #dbe7fb;display:flex;flex-direction:column;justify-content:space-between;min-height:185px}
+    .value-card:nth-child(2){background:#fff;color:var(--ink);border:1px solid var(--line)}
+    .value-card:nth-child(3){background:#fff7f7;color:var(--ink);border:1px solid #f2d9da}
+    .value-card:nth-child(4){background:#fff2f2;color:var(--ink);border:1px solid #f0d6d7}
+    .value-icon{width:43px;height:43px;border-radius:13px;background:rgba(255,255,255,.14);display:grid;place-items:center}
+    .value-card:nth-child(2) .value-icon,.value-card:nth-child(3) .value-icon,.value-card:nth-child(4) .value-icon{background:#edf4ff;color:var(--blue)}
+    .value-card h3{font-size:1.02rem;margin-top:20px;color:var(--navy)}
+    .value-card p{font-size:.8rem;margin-top:7px;color:inherit;opacity:.74}
+
+    .services-section{background:var(--soft)}
+    .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .service-card{position:relative;overflow:hidden;padding:27px;border-radius:25px;background:#fff;border:1px solid var(--line);min-height:330px;box-shadow:0 12px 34px rgba(18,42,74,.06)}
+    .service-card::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-70px;top:-70px;background:rgba(7,87,217,.06)}
+    .service-card.plumbing::after{background:rgba(229,35,39,.07)}
+    .service-card.solar::after{background:rgba(240,163,0,.08)}
+    .service-card.security::after{background:rgba(29,181,109,.09)}
+    .service-card.featured{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:34px;min-height:0}
+    .service-icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:#edf4ff;color:var(--blue);margin-bottom:19px}
+    .plumbing .service-icon{background:#fff0f0;color:var(--red)}
+    .solar .service-icon{background:#fff8e7;color:#d18a00}
+    .security .service-icon{background:#edfdf6;color:#17925a}
+    .service-card h3{font-size:1.38rem;margin-bottom:7px}
+    .service-card p{font-size:.92rem;max-width:520px}
+    .service-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 17px;margin:20px 0 0;padding:0;list-style:none}
+    .service-list li{display:flex;gap:9px;align-items:flex-start;font-size:.82rem;color:#40506a}
+    .tick{width:18px;height:18px;flex:0 0 18px;border-radius:50%;display:grid;place-items:center;background:#e9f1ff;color:var(--blue);font-size:.68rem;font-weight:900;margin-top:2px}
+    .plumbing .tick{background:#fff0f0;color:var(--red)}
+    .service-mini{display:flex;align-items:center;justify-content:center;border-radius:22px;min-height:240px;background:linear-gradient(140deg,#eef5ff,#fff);border:1px solid #e2ebf6;position:relative;overflow:hidden}
+    .service-mini.plumb-bg{background:linear-gradient(140deg,#fff2f3,#fff)}
+    .service-mini.solar-bg{background:linear-gradient(140deg,#fff9ea,#fff)}
+    .service-mini.sec-bg{background:linear-gradient(140deg,#effcf6,#fff)}
+    .diagram{width:min(78%,280px);aspect-ratio:1;border-radius:26px;border:1px solid rgba(7,87,217,.16);background:rgba(255,255,255,.76);display:grid;place-items:center;box-shadow:0 20px 40px rgba(18,42,74,.08)}
+    .diagram svg{width:65%;height:65%}
+
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .step{padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff;min-height:210px;position:relative}
+    .step-num{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:.8rem;font-weight:900;margin-bottom:28px}
+    .step:nth-child(2) .step-num,.step:nth-child(4) .step-num{background:var(--blue)}
+    .step:nth-child(3) .step-num,.step:nth-child(5) .step-num{background:var(--red)}
+    .step h3{font-size:1.04rem;margin-bottom:7px}
+    .step p{font-size:.83rem}
+    .process-note{margin-top:16px;padding:18px 20px;border:1px dashed #bfd0e7;border-radius:18px;background:#f8fbff;display:flex;gap:12px;align-items:flex-start}
+    .process-note b{color:var(--navy)}
+    .process-note p{font-size:.83rem}
+
+    .team-section{background:linear-gradient(180deg,#fff,#f6f9fd)}
+    .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .team-card{padding:24px;border-radius:22px;border:1px solid var(--line);background:#fff;min-height:225px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow-sm)}
+    .avatar{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;display:grid;place-items:center;font-weight:900;font-size:1.1rem}
+    .team-card:nth-child(2) .avatar{background:linear-gradient(135deg,#153c71,var(--red))}
+    .team-card:nth-child(3) .avatar{background:linear-gradient(135deg,var(--blue),#58a1ff)}
+    .team-card:nth-child(4) .avatar{background:linear-gradient(135deg,#7f1d1d,var(--red))}
+    .role{font-size:.74rem;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .team-card h3{margin-top:6px;font-size:1.03rem}
+    .team-card p{font-size:.8rem;margin-top:7px}
+
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .why-list{display:grid;gap:11px}
+    .why-item{display:flex;gap:13px;align-items:flex-start;padding:15px 16px;border:1px solid var(--line);border-radius:18px;background:#fff}
+    .why-item .check{width:26px;height:26px;flex:0 0 26px;border-radius:9px;background:#edf4ff;color:var(--blue);display:grid;place-items:center;font-weight:900;font-size:.75rem}
+    .why-item b{display:block;font-size:.92rem;color:var(--navy)}
+    .why-item span{display:block;font-size:.78rem;color:var(--muted);margin-top:2px}
+    .why-callout{border-radius:28px;padding:32px;background:linear-gradient(145deg,#edf4ff,#fff7f7);color:var(--ink);border:1px solid var(--line);position:relative;overflow:hidden;min-height:100%}
+    .why-callout::after{content:"";position:absolute;width:250px;height:250px;border-radius:50%;right:-90px;bottom:-100px;background:rgba(7,87,217,.06)}
+    .why-callout h3{font-size:1.7rem;max-width:460px}
+    .why-callout p{color:var(--muted);margin-top:11px;max-width:520px}
+    .why-callout .btn{margin-top:23px}
+
+    .contact-section{padding-bottom:70px}
+    .contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:20px}
+    .contact-card{border-radius:26px;border:1px solid var(--line);background:linear-gradient(145deg,#f8fbff,#fff);padding:28px;box-shadow:var(--shadow-sm)}
+    .contact-card h2{font-size:2.1rem}
+    .contact-card p{margin-top:10px}
+    .contact-detail{display:grid;gap:12px;margin-top:23px}
+    .detail{display:flex;gap:13px;align-items:flex-start;padding:14px 15px;border-radius:17px;background:#fff;border:1px solid var(--line)}
+    .detail-icon{width:37px;height:37px;border-radius:11px;background:#edf4ff;color:var(--blue);display:grid;place-items:center;flex:0 0 37px}
+    .detail b{display:block;color:var(--navy);font-size:.84rem}
+    .detail span,.detail a{display:block;color:var(--muted);font-size:.8rem;margin-top:1px}
+    .detail a:hover{color:var(--blue)}
+    .quote-card{border-radius:26px;border:1px solid var(--line);background:#fff;padding:29px;box-shadow:var(--shadow-sm)}
+    .quote-card h3{font-size:1.45rem}
+    .quote-card>p{font-size:.84rem;margin-top:6px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:19px}
+    .field{display:grid;gap:6px}
+    .field.full{grid-column:span 2}
+    .field label{font-size:.77rem;font-weight:800;color:#41516a}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #cfdae8;border-radius:13px;padding:12px 13px;background:#fff;color:var(--ink);font-size:.88rem}
+    .field textarea{min-height:125px;resize:vertical}
+    .form-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+    .form-actions .btn{border-radius:14px}
+    .form-note{font-size:.72rem;color:var(--muted);margin-top:10px}
+
+    .footer{background:#f4f7fc;color:var(--ink);padding:34px 0 95px;border-top:1px solid var(--line)}
+    .footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:30px}
+    .footer-brand{display:flex;gap:12px;align-items:flex-start}
+    .footer .brand-copy strong{color:var(--navy)}
+    .footer .brand-copy span{color:#ff666a}
+    .footer h3{font-size:.94rem;color:var(--navy);margin-bottom:11px}
+    .footer p,.footer a{font-size:.78rem;color:var(--muted)}
+    .footer a:hover{color:var(--blue)}
+    .footer-links{display:grid;gap:6px}
+    .footer-bottom{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}
+    .legal{font-size:.7rem!important;color:#7a879a!important}
+
+    .mobile-bar{position:fixed;left:14px;right:14px;bottom:12px;z-index:60;display:none;grid-template-columns:1fr 1fr;gap:8px;padding:8px;border:1px solid rgba(7,87,217,.13);background:rgba(255,255,255,.94);backdrop-filter:blur(18px);border-radius:18px;box-shadow:0 18px 50px rgba(9,23,45,.18)}
+    .mobile-bar a{display:flex;justify-content:center;align-items:center;gap:7px;border-radius:12px;padding:12px 10px;font-size:.8rem;font-weight:900}
+    .mobile-bar a:first-child{background:var(--blue);color:#fff}
+    .mobile-bar a:last-child{background:#eaf8f0;color:#0f8650}
+
+
+    .brand-logo{width:170px;height:54px;object-fit:contain;object-position:left center}
+    .hero-photo-shell{position:relative;min-height:560px;border-radius:34px;overflow:hidden;background:#f0f4fa;box-shadow:var(--shadow);border:1px solid #dce6f2}
+    .hero-photo-main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 44%;}
+    .hero-photo-shell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,27,53,.02) 28%,rgba(7,27,53,.48) 100%)}
+    .photo-badge{position:absolute;z-index:2;top:20px;left:20px;display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--navy);font-size:.75rem;font-weight:900;box-shadow:0 8px 24px rgba(9,23,45,.12)}
+    .photo-badge i{width:8px;height:8px;border-radius:50%;background:#21a768}
+    .hero-photo-caption{position:absolute;z-index:2;left:24px;right:24px;bottom:24px;color:#fff}
+    .hero-photo-caption strong{display:block;font-size:1.22rem;letter-spacing:-.02em}
+    .hero-photo-caption span{display:block;font-size:.82rem;color:rgba(255,255,255,.78);margin-top:5px}
+    .photo-stack{position:absolute;z-index:3;right:18px;bottom:18px;display:grid;grid-template-columns:90px 90px;gap:8px}
+    .photo-stack a{display:block;height:86px;border-radius:14px;overflow:hidden;border:2px solid rgba(255,255,255,.92);box-shadow:0 12px 28px rgba(9,23,45,.18);background:#fff}
+    .photo-stack img{width:100%;height:100%;object-fit:cover}
+
+    .gallery-section{background:#f7f9fc}
+    .gallery-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:-10px 0 22px}
+    .filter-btn{appearance:none;border:1px solid var(--line);background:#fff;color:#40506a;border-radius:999px;padding:9px 13px;font-size:.78rem;font-weight:900}
+    .filter-btn[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .gallery-card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 10px 28px rgba(18,42,74,.06);transition:transform .2s ease,box-shadow .2s ease}
+    .gallery-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(18,42,74,.10)}
+    .gallery-card.is-hidden{display:none}
+    .gallery-media{position:relative;aspect-ratio:4/3;background:#f4f7fb;padding:9px;border-bottom:1px solid #edf1f6}
+    .gallery-media img{width:100%;height:100%;object-fit:contain;border-radius:15px;background:#fff}
+    .gallery-open{position:absolute;right:17px;top:17px;width:37px;height:37px;border:1px solid rgba(255,255,255,.8);border-radius:12px;background:rgba(11,27,53,.68);color:#fff;display:grid;place-items:center;font-weight:900;backdrop-filter:blur(7px)}
+    .gallery-meta{padding:15px 16px 17px}
+    .gallery-meta .role{font-size:.67rem}
+    .gallery-meta h3{font-size:1rem;margin-top:5px}
+    .gallery-meta p{font-size:.75rem;margin-top:4px}
+
+    .gallery-note{margin-top:22px;padding:15px 17px;border-radius:16px;border:1px solid #cfdff2;background:#fff;font-size:.76rem;color:var(--muted)}
+    .lightbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(7,20,40,.82);backdrop-filter:blur(8px)}
+    .lightbox.open{display:flex}
+    .lightbox-panel{position:relative;width:min(1100px,100%);max-height:92vh;background:#fff;border-radius:22px;padding:12px;box-shadow:0 28px 90px rgba(0,0,0,.32)}
+    .lightbox-panel img{width:100%;max-height:76vh;object-fit:contain;background:#f5f7fa;border-radius:14px}
+    .lightbox-caption{padding:11px 4px 2px}.lightbox-caption strong{display:block;color:var(--navy)}.lightbox-caption span{font-size:.78rem;color:var(--muted)}
+    .lightbox-close{position:absolute;right:18px;top:18px;width:42px;height:42px;border:0;border-radius:13px;background:#fff;color:var(--navy);box-shadow:0 8px 22px rgba(0,0,0,.18);font-size:1.3rem;font-weight:900}
+
+    @media (max-width:980px){
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width:980px){
+      .nav-links{gap:16px}
+      .hero-grid,.section-head,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .visual-shell{min-height:430px}
+      .section-head .intro{justify-self:start}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width:760px){
+      .container{width:min(calc(100% - 28px),var(--max))}
+      .topbar-inner{justify-content:center;text-align:center;min-height:44px}
+      .topbar-links{display:none}
+      .nav{min-height:70px}
+      .brand-logo{width:140px;height:48px}
+      .nav-links{position:absolute;top:70px;left:14px;right:14px;display:none;padding:12px;flex-direction:column;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow);gap:0}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:12px 10px;border-radius:10px}
+      .nav-links a:hover{background:var(--soft)}
+      .nav-cta{display:none}
+      .menu-btn{display:grid;place-items:center}
+      .hero{padding:52px 0 28px}
+      .trust-row{grid-template-columns:repeat(2,1fr)}
+      .visual-shell{min-height:380px;border-radius:25px}
+      .service-orb{gap:9px}
+      .orb-card{min-height:122px;padding:14px}
+      section{padding:70px 0}
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .stat:not(:last-child)::after{display:none}
+      .stat:nth-child(odd){border-right:1px solid var(--line)}
+      .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .about-side,.services-grid,.why-grid,.form-grid{grid-template-columns:1fr}
+      .service-card.featured{grid-column:span 1;grid-template-columns:1fr}
+      .service-list{grid-template-columns:1fr}
+      .field.full{grid-column:span 1}
+      .process-grid{grid-template-columns:1fr}
+      .team-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .mobile-bar{display:grid}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    }
+  
+    /* Project photos: keep supplied photographs large, sharp and easy to see. */
+    .gallery-media{aspect-ratio:4/3;min-height:280px;padding:8px;background:#f7f9fc}
+    .gallery-media img{object-fit:contain;width:100%;height:100%;border-radius:15px;background:#fff}
+    .gallery-card{min-width:0}
+    @media (min-width:1100px){.gallery-grid{grid-template-columns:repeat(3,1fr)}.gallery-media{min-height:310px}}
+    @media (max-width:720px){.gallery-media{min-height:260px}.gallery-grid{grid-template-columns:1fr}}
+
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div><strong>MR Electrical & Plumbing Solutions (Pty) Ltd</strong></div>
+      <div class="topbar-links" aria-label="Quick company information">
+        <span>Established 2022</span><span class="dot"></span><span>CIPC registered Jan 2026</span><span class="dot"></span><span>SARS registered</span><span class="dot"></span><span>B-BBEE compliant</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="nav-wrap">
+    <nav class="container nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="MR Electrical and Plumbing Solutions home">
+        <img class="brand-logo" src="logo.webp" alt="MR Electrical & Plumbing Solutions logo" width="170" height="54">
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Our Work</a>
+        <a href="#process">How We Work</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="tel:+27812140657">Call 081 214 0657 <span aria-hidden="true">↗</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Electrical • Plumbing • Solar • Security</span>
+          <h1>Professional work.<br><span>Lasting comfort.</span></h1>
+          <p class="hero-lead">Reliable, safe and professional electrical and plumbing solutions for residential, commercial and industrial clients across Pretoria, Johannesburg and surrounding areas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Request a Quote <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="https://wa.me/27812140657?text=Hello%20MR%20Electrical%20%26%20Plumbing%20Solutions%2C%20I%27d%20like%20to%20request%20a%20quote." target="_blank" rel="noopener">WhatsApp Us <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-profile" href="MR-Electrical-Plumbing-Company-Profile.pdf" target="_blank" rel="noopener">View Company Profile <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="trust-row" aria-label="Trust indicators">
+            <div class="trust-item"><b>Since 2022</b><span>Experience in active operation</span></div>
+            <div class="trust-item"><b>Registered 2026</b><span>CIPC registration</span></div>
+            <div class="trust-item"><b>Safety First</b><span>Professional workmanship</span></div>
+            <div class="trust-item"><b>Fast Response</b><span>Urgent issues addressed quickly</span></div>
+          </div>
+        </div>
+
+        <div class="hero-photo-shell" aria-label="Featured project photograph">
+          <img class="hero-photo-main" src="lighting-installation.webp" alt="Electrical installation work completed at a commercial site" fetchpriority="high">
+          <div class="photo-badge"><i></i> Real project work</div>
+          <div class="hero-photo-caption"><strong>Professional work in action.</strong><span>Electrical installations, plumbing systems, solar and security solutions.</span></div>
+          <div class="photo-stack" aria-label="Project photo previews">
+            <a href="#projects" aria-label="View distribution board project photo"><img src="distribution-board.webp" alt="Distribution board installation" loading="lazy"></a>
+            <a href="#projects" aria-label="View plumbing project photos"><img src="toilet-installation.webp" alt="Bathroom plumbing installation" loading="lazy"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Company facts">
+      <div class="container stats-grid">
+        <div class="stat"><b>2022</b><span>Company established</span></div>
+        <div class="stat"><b>2026</b><span>Official CIPC registration</span></div>
+        <div class="stat"><b>03 areas</b><span>Pretoria • Johannesburg • surrounding</span></div>
+        <div class="stat"><b>4 disciplines</b><span>Electrical • plumbing • solar • security</span></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Welcome to our company</span><h2 style="margin-top:11px">Built on trust.<br>Driven by quality.</h2></div>
+          <div class="intro"><p>MR Electrical & Plumbing Solutions (Pty) Ltd is a proudly South African service company focused on safe, reliable and professional solutions that meet customer needs and support long-term service excellence.</p></div>
+        </div>
+        <div class="about-grid">
+          <article class="panel about-main">
+            <div><h3>About MR Electrical & Plumbing Solutions</h3><p style="margin-top:9px">We have been actively operating since 2022 and officially registered with CIPC in January 2026. We serve residential, commercial and industrial clients with practical solutions, clear communication and consistent service delivery.</p></div>
+            <div class="pill-row"><span class="pill">Professional workmanship</span><span class="pill">Affordable pricing</span><span class="pill">Fast response times</span><span class="pill">Long-lasting solutions</span><span class="pill">Emergency support</span></div>
+            <div class="detail"><div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.2 7-11A7 7 0 1 0 5 10c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.8"/></svg></div><div><b>Service area</b><span>Pretoria, Johannesburg and surrounding areas</span></div></div>
+          </article>
+          <div class="about-side">
+            <article class="value-card"><div class="value-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="m12 3 2.2 5.2 5.8.5-4.4 3.8 1.3 5.7L12 15l-4.9 3.2 1.3-5.7L4 8.7l5.8-.5L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div><div><h3>Integrity</h3><p>We value trust, honesty and responsible service delivery.</p></div></article>
+            <article class="value-card"><div class="value-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M6 4h12M9 4v4m6-4v4M5 8h14v10H5zM8 12h3m-3 3h8m-5-3h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><div><h3>Professionalism</h3><p>Clear communication, dependable processes and quality workmanship.</p></div></article>
+            <article class="value-card"><div class="value-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M12 4v8l5 3M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><div><h3>Reliability</h3><p>Fast response and solutions designed for everyday dependability.</p></div></article>
+            <article class="value-card"><div class="value-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M12 3 20 6v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6l8-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>Safety First</h3><p>Safety, quality and customer satisfaction guide every job.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Our key services</span><h2 style="margin-top:11px">Solutions that keep<br>homes & businesses moving.</h2></div>
+          <div class="intro"><p>From installations and repairs to maintenance, fault finding and emergency call-outs, we provide a focused range of practical services backed by professional workmanship.</p></div>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card featured electrical">
+            <div>
+              <div class="service-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+              <h3>Electrical Services</h3>
+              <p>Professional electrical work for residential, commercial and industrial clients, with a focus on safety, reliability and efficient solutions.</p>
+              <ul class="service-list">
+                <li><span class="tick">✓</span>Electrical installations</li><li><span class="tick">✓</span>Electrical repairs</li>
+                <li><span class="tick">✓</span>Electrical maintenance</li><li><span class="tick">✓</span>Fault finding & troubleshooting</li>
+                <li><span class="tick">✓</span>Distribution board upgrades</li><li><span class="tick">✓</span>Lighting installation</li>
+                <li><span class="tick">✓</span>Power outlet installation</li><li><span class="tick">✓</span>Electrical safety inspections</li>
+                <li><span class="tick">✓</span>Security & CCTV installations</li><li><span class="tick">✓</span>Emergency electrical call-outs</li>
+              </ul>
+            </div>
+            <div class="service-mini"><div class="diagram"><svg viewBox="0 0 180 180" fill="none"><path d="M90 18 126 55 110 92 90 82 70 92 54 55 90 18Z" stroke="#0757d9" stroke-width="5"/><path d="M90 82v46M64 128h52" stroke="#0b1b35" stroke-width="5" stroke-linecap="round"/><path d="m91 50-20 30h17l-8 21 23-34H86l5-17Z" fill="#e52327"/></svg></div></div>
+          </article>
+
+          <article class="service-card plumbing">
+            <div class="service-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M6 3v7c0 2.2 1.8 4 4 4h4c2.2 0 4-1.8 4-4V3M6 3h12M12 14v7M8 21h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Plumbing Services</h3>
+            <p>Dependable plumbing installations, repairs and maintenance, including leaks, burst pipes, bathrooms, kitchens and geysers.</p>
+            <ul class="service-list"><li><span class="tick">✓</span>Plumbing installations</li><li><span class="tick">✓</span>Plumbing repairs</li><li><span class="tick">✓</span>Plumbing maintenance</li><li><span class="tick">✓</span>Leak detection & repairs</li><li><span class="tick">✓</span>Burst pipe repairs</li><li><span class="tick">✓</span>Bathroom & kitchen plumbing</li><li><span class="tick">✓</span>Geyser repairs & installations</li><li><span class="tick">✓</span>Drainage system repairs</li><li><span class="tick">✓</span>Solar geyser installations</li><li><span class="tick">✓</span>Emergency plumbing services</li></ul>
+          </article>
+
+          <article class="service-card solar">
+            <div class="service-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 12v2M6 8H4m16 0h-2M7.5 3.7 6 2.2m10.5 1.5L18 2.2M7.5 12.3 6 13.8m10.5-1.5 1.5 1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M5 17h14l-2 4H7l-2-4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 16V12m4 4V11m4 5v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Solar Geyser Installations</h3>
+            <p>Solar geyser installation solutions designed to support dependable hot-water systems and lasting comfort.</p>
+            <div class="service-mini solar-bg" style="margin-top:20px;min-height:150px"><div class="diagram"><svg viewBox="0 0 180 180" fill="none"><circle cx="90" cy="70" r="25" stroke="#d18a00" stroke-width="6"/><path d="M90 23v17M90 100v17M43 70h17m60 0h17M57 37l12 12m42 42 12 12M123 37l-12 12M69 91 57 103" stroke="#d18a00" stroke-width="5" stroke-linecap="round"/><path d="M48 132h84l-8 25H56l-8-25Z" stroke="#0b1b35" stroke-width="5"/><path d="M70 130V92m20 40V88m20 44V99" stroke="#0757d9" stroke-width="5" stroke-linecap="round"/></svg></div></div>
+          </article>
+
+          <article class="service-card security">
+            <div class="service-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H4zM8 20h8M12 16v4M8 9h8M8 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Security & CCTV</h3>
+            <p>Security and CCTV installation solutions to strengthen visibility, awareness and controlled access at your property.</p>
+            <div class="service-mini sec-bg" style="margin-top:20px;min-height:150px"><div class="diagram"><svg viewBox="0 0 180 180" fill="none"><path d="M48 74 111 57l18 52-63 17-18-52Z" stroke="#17925a" stroke-width="5" stroke-linejoin="round"/><path d="M129 88h14c7 0 12 5 12 12v18" stroke="#0b1b35" stroke-width="5" stroke-linecap="round"/><path d="M56 126v23m0 0h-8m8 0h8" stroke="#0b1b35" stroke-width="5" stroke-linecap="round"/><circle cx="87" cy="93" r="15" stroke="#0757d9" stroke-width="5"/></svg></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="projects" class="gallery-section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Our work</span><h2 style="margin-top:11px">Real projects.<br>Professional results.</h2></div>
+          <div class="intro"><p>Explore selected electrical, plumbing, security and site-installation work completed by the team. Every photograph below comes from the company's supplied project images.</p></div>
+        </div>
+
+        <div class="gallery-toolbar" role="group" aria-label="Filter project photos">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter-btn" type="button" data-filter="electrical" aria-pressed="false">Electrical</button>
+          <button class="filter-btn" type="button" data-filter="plumbing" aria-pressed="false">Plumbing</button>
+          <button class="filter-btn" type="button" data-filter="security" aria-pressed="false">Security</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <article class="gallery-card" data-category="electrical"><div class="gallery-media"><img src="distribution-board.webp" alt="Distribution board installation with labelled breakers" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="distribution-board.webp" data-title="Distribution board upgrade / installation" data-category="Electrical" aria-label="Open distribution board photograph">↗</button></div><div class="gallery-meta"><span class="role">Electrical</span><h3>Distribution board work</h3><p>Professional electrical installation and board work.</p></div></article>
+          <article class="gallery-card" data-category="electrical"><div class="gallery-media"><img src="lighting-installation.webp" alt="Technician working on commercial lighting installation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="lighting-installation.webp" data-title="Commercial lighting installation" data-category="Electrical" aria-label="Open lighting installation photograph">↗</button></div><div class="gallery-meta"><span class="role">Electrical</span><h3>Commercial lighting</h3><p>Lighting installation and finishing work on site.</p></div></article>
+          <article class="gallery-card" data-category="electrical"><div class="gallery-media"><img src="power-socket.webp" alt="Installed white electrical wall socket" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="power-socket.webp" data-title="Power outlet installation" data-category="Electrical" aria-label="Open power socket photograph">↗</button></div><div class="gallery-meta"><span class="role">Electrical</span><h3>Power outlet installation</h3><p>Clean, practical electrical point installation.</p></div></article>
+          <article class="gallery-card" data-category="electrical"><div class="gallery-media"><img src="wall-switch.webp" alt="Installed wall light switch" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="wall-switch.webp" data-title="Wall switch installation" data-category="Electrical" aria-label="Open wall switch photograph">↗</button></div><div class="gallery-meta"><span class="role">Electrical</span><h3>Switch installation</h3><p>Neat finishing for everyday electrical controls.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="copper-plumbing-valve.webp" alt="Copper pipe and shut-off valve plumbing work" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="copper-plumbing-valve.webp" data-title="Copper plumbing and valve work" data-category="Plumbing" aria-label="Open copper plumbing photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Copper pipe & valve work</h3><p>Water supply line and isolation valve installation.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="bathroom-sink.webp" alt="Bathroom basin and tap installation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="bathroom-sink.webp" data-title="Bathroom basin installation" data-category="Plumbing" aria-label="Open basin photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Bathroom plumbing</h3><p>Basin, tap and drainage installation work.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="toilet-installation.webp" alt="New toilet installed in tiled bathroom" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="toilet-installation.webp" data-title="Toilet installation" data-category="Plumbing" aria-label="Open toilet installation photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Toilet installation</h3><p>Bathroom sanitaryware installation and finishing.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="drainage-pipes.webp" alt="Drainage pipework laid in an excavation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="drainage-pipes.webp" data-title="Drainage pipework" data-category="Plumbing" aria-label="Open drainage pipe photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Drainage pipework</h3><p>Drainage system installation and connection work.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="water-tank.webp" alt="Hot water tank installed in a utility space" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="water-tank.webp" data-title="Water heating system" data-category="Plumbing" aria-label="Open water tank photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Water heating system</h3><p>Water storage and heating-related plumbing work.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="water-meter.webp" alt="Water meter and copper pipe installation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="water-meter.webp" data-title="Water meter installation" data-category="Plumbing" aria-label="Open water meter photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Water meter connection</h3><p>Meter and supply connection work.</p></div></article>
+          <article class="gallery-card" data-category="security"><div class="gallery-media"><img src="cctv-camera.webp" alt="Hikvision CCTV camera installed on an exterior wall" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="cctv-camera.webp" data-title="CCTV camera installation" data-category="Security" aria-label="Open CCTV photograph">↗</button></div><div class="gallery-meta"><span class="role">Security</span><h3>CCTV installation</h3><p>Professional surveillance camera installation.</p></div></article>
+          <article class="gallery-card" data-category="security"><div class="gallery-media"><img src="access-control.webp" alt="ZKTeco fingerprint access control device" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="access-control.webp" data-title="Access control installation" data-category="Security" aria-label="Open access control photograph">↗</button></div><div class="gallery-meta"><span class="role">Security</span><h3>Access control</h3><p>Fingerprint and access-control device installation.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="project-water-tank.jpg" alt="Water tank installation in a utility space" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-water-tank.jpg" data-title="Water tank installation" data-category="Plumbing" aria-label="Open water tank project photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Water tank installation</h3><p>Water storage equipment installation and pipe connections.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="project-toilet.jpg" alt="Toilet installed in a tiled bathroom" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-toilet.jpg" data-title="Bathroom toilet installation" data-category="Plumbing" aria-label="Open toilet project photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Bathroom toilet installation</h3><p>Sanitaryware installation and bathroom finishing.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="project-drainage-pipes.jpg" alt="Drainage pipes laid in an excavation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-drainage-pipes.jpg" data-title="Drainage pipe installation" data-category="Plumbing" aria-label="Open drainage project photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Drainage installation</h3><p>Drainage pipework laid and prepared for connection.</p></div></article>
+          <article class="gallery-card" data-category="electrical"><div class="gallery-media"><img src="project-power-socket.jpg" alt="Installed electrical wall socket" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-power-socket.jpg" data-title="Power socket installation" data-category="Electrical" aria-label="Open power socket project photograph">↗</button></div><div class="gallery-meta"><span class="role">Electrical</span><h3>Power socket installation</h3><p>Electrical outlet installation and neat wall finishing.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="project-bathroom-sink.jpg" alt="Bathroom basin installation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-bathroom-sink.jpg" data-title="Bathroom basin installation" data-category="Plumbing" aria-label="Open bathroom basin project photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Bathroom basin</h3><p>Basin installation and bathroom plumbing work.</p></div></article>
+          <article class="gallery-card" data-category="electrical"><div class="gallery-media"><img src="project-wall-switch.jpg" alt="Installed wall light switch" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-wall-switch.jpg" data-title="Wall switch installation" data-category="Electrical" aria-label="Open wall switch project photograph">↗</button></div><div class="gallery-meta"><span class="role">Electrical</span><h3>Wall switch installation</h3><p>Switch fitting with clean, practical finishing.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="project-plumbing-pipe.jpg" alt="Plumbing pipe installation in a wall" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-plumbing-pipe.jpg" data-title="Plumbing pipe installation" data-category="Plumbing" aria-label="Open plumbing pipe project photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Pipe installation</h3><p>Water pipe installation and connection work.</p></div></article>
+          <article class="gallery-card" data-category="security"><div class="gallery-media"><img src="project-cctv-camera.jpg" alt="CCTV camera installation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-cctv-camera.jpg" data-title="CCTV camera installation" data-category="Security" aria-label="Open CCTV project photograph">↗</button></div><div class="gallery-meta"><span class="role">Security</span><h3>CCTV camera</h3><p>Surveillance camera installation and positioning.</p></div></article>
+          <article class="gallery-card" data-category="security"><div class="gallery-media"><img src="project-access-control.jpg" alt="Fingerprint access control device installation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-access-control.jpg" data-title="Fingerprint access control" data-category="Security" aria-label="Open access control project photograph">↗</button></div><div class="gallery-meta"><span class="role">Security</span><h3>Access control</h3><p>Fingerprint access-control device installation.</p></div></article>
+          <article class="gallery-card" data-category="security"><div class="gallery-media"><img src="project-security-installation.jpg" alt="Security equipment installation on site" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-security-installation.jpg" data-title="Security installation" data-category="Security" aria-label="Open security project photograph">↗</button></div><div class="gallery-meta"><span class="role">Security</span><h3>Security installation</h3><p>On-site security equipment installation work.</p></div></article>
+          <article class="gallery-card" data-category="plumbing"><div class="gallery-media"><img src="project-water-meter.jpg" alt="Water meter installation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-water-meter.jpg" data-title="Water meter installation" data-category="Plumbing" aria-label="Open water meter project photograph">↗</button></div><div class="gallery-meta"><span class="role">Plumbing</span><h3>Water meter</h3><p>Meter connection and water supply installation.</p></div></article>
+          <article class="gallery-card" data-category="electrical"><div class="gallery-media"><img src="project-distribution-board.jpg" alt="Electrical distribution board installation" loading="lazy"><button class="gallery-open" type="button" data-lightbox data-src="project-distribution-board.jpg" data-title="Distribution board installation" data-category="Electrical" aria-label="Open distribution board project photograph">↗</button></div><div class="gallery-meta"><span class="role">Electrical</span><h3>Distribution board</h3><p>Electrical board, breakers and circuit installation.</p></div></article>
+        </div>
+
+
+        <div class="gallery-note">The gallery is designed to keep every project image clear and easy to view on mobile and desktop. Tap any photo to open it larger. New supplied project photographs have also been added below.</div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">How we work</span><h2 style="margin-top:11px">A clear process,<br>from contact to completion.</h2></div>
+          <div class="intro"><p>We aim to make the experience simple: understand the need, assess the work, communicate the quotation clearly, then deliver and close the job properly.</p></div>
+        </div>
+        <div class="process-grid">
+          <article class="step"><div class="step-num">01</div><h3>Client Contact</h3><p>Clients reach us via phone call, WhatsApp or email for service requests and enquiries.</p></article>
+          <article class="step"><div class="step-num">02</div><h3>Fast Response</h3><p>We respond quickly to messages and calls so urgent issues can be addressed immediately.</p></article>
+          <article class="step"><div class="step-num">03</div><h3>Site Assessment</h3><p>Where necessary, we visit the site to properly assess the job and determine the best solution.</p></article>
+          <article class="step"><div class="step-num">04</div><h3>Quotation</h3><p>We provide clear, transparent and affordable quotations within a short time.</p></article>
+          <article class="step"><div class="step-num">05</div><h3>Service Rendered</h3><p>Work is carried out professionally, safely and according to industry standards.</p></article>
+          <article class="step"><div class="step-num">06</div><h3>Completion & Satisfaction</h3><p>We make sure the work is completed properly and the client is fully satisfied before closing the job.</p></article>
+        </div>
+        <div class="process-note"><div style="width:28px;height:28px;flex:0 0 28px;border-radius:9px;background:#fff;color:var(--red);display:grid;place-items:center;font-weight:900">✓</div><div><b>Our commitment</b><p>Safety first, professional workmanship, reliable service and customer satisfaction are central to every project.</p></div></div>
+      </div>
+    </section>
+
+    <section id="team" class="team-section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Meet our team</span><h2 style="margin-top:11px">People behind<br>the work.</h2></div>
+          <div class="intro"><p>A focused leadership and technical team with clear responsibility across plumbing, electrical work, operations and finance.</p></div>
+        </div>
+        <div class="team-grid">
+          <article class="team-card"><div class="avatar">MW</div><div><span class="role">Head of Plumbing</span><h3>Mr. Moswana W</h3><p>Plumbing services, repairs, installations and maintenance.</p></div></article>
+          <article class="team-card"><div class="avatar">ST</div><div><span class="role">Head of Electrical</span><h3>Mr. Seroka TF</h3><p>Electrical services, fault finding, installations and safety-focused work.</p></div></article>
+          <article class="team-card"><div class="avatar">RM</div><div><span class="role">Managing Director & Founder</span><h3>Mr. Rambau MJ</h3><p>Company leadership, service direction and customer-focused delivery.</p></div></article>
+          <article class="team-card"><div class="avatar">DN</div><div><span class="role">Director & Co-Founder</span><h3>Miss Dube N</h3><p>Operations & Finance.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Why choose us</span><h2 style="margin-top:11px">Service you can<br>feel confident about.</h2></div>
+          <div class="intro"><p>Our positioning is simple: professional work, responsive communication and practical solutions that deliver lasting value.</p></div>
+        </div>
+        <div class="why-grid">
+          <div class="why-list">
+            <div class="why-item"><div class="check">✓</div><div><b>Experienced since 2022</b><span>Established experience backed by active service delivery.</span></div></div>
+            <div class="why-item"><div class="check">✓</div><div><b>Fast and reliable service</b><span>Quick responses and dependable follow-through.</span></div></div>
+            <div class="why-item"><div class="check">✓</div><div><b>Affordable pricing</b><span>Clear, transparent quotations built around the job.</span></div></div>
+            <div class="why-item"><div class="check">✓</div><div><b>Professional workmanship</b><span>Work carried out safely and professionally.</span></div></div>
+            <div class="why-item"><div class="check">✓</div><div><b>Quality guaranteed solutions</b><span>Focused on reliable outcomes and customer satisfaction.</span></div></div>
+            <div class="why-item"><div class="check">✓</div><div><b>Emergency support available</b><span>Urgent electrical and plumbing issues can be addressed quickly.</span></div></div>
+          </div>
+          <div class="why-callout"><span class="eyebrow" style="color:#8fbaff">Need a professional solution?</span><h3 style="margin-top:14px">Tell us what needs attention. We will help you determine the next step.</h3><p>Phone, WhatsApp or email us for service requests and enquiries across Pretoria, Johannesburg and surrounding areas.</p><a class="btn btn-primary" href="#contact">Get in Touch <span aria-hidden="true">→</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Get in touch</span><h2 style="margin-top:11px">Let's get your<br>job moving.</h2></div>
+          <div class="intro"><p>Request a quotation or ask us about a service. You can call, WhatsApp or email the team directly.</p></div>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h2>Contact details</h2>
+            <p>We proudly serve Pretoria, Johannesburg and surrounding areas.</p>
+            <div class="contact-detail">
+              <div class="detail"><div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 4h3l2 5-2 1.5a15 15 0 0 0 3.5 3.5L15 12l5 2v3c0 1.1-.9 2-2 2C10.8 19 5 13.2 5 6c0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div><div><b>Phone</b><a href="tel:+27812140657">081-214-0657</a></div></div>
+              <div class="detail"><div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 4h3l2 5-2 1.5a15 15 0 0 0 3.5 3.5L15 12l5 2v3c0 1.1-.9 2-2 2C10.8 19 5 13.2 5 6c0-1.1.9-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div><div><b>Alternative phone</b><a href="tel:+27716372553">071-637-2553</a></div></div>
+              <div class="detail"><div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.7"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><b>Email</b><a href="mailto:Mrelectricalandplumbing@outlook.com">Mrelectricalandplumbing@outlook.com</a></div></div>
+              <div class="detail"><div class="detail-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="1.7"/><path d="M8 8c3 2 5 2 8 0M7 12h10M8 16c3-2 5-2 8 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div><div><b>Registration</b><span>CIPC: 2026/083265/07</span></div></div>
+            </div>
+          </article>
+
+          <article class="quote-card">
+            <h3>Request a quotation</h3>
+            <p>Fill in a few details and send your request directly via WhatsApp or email.</p>
+            <form id="quoteForm">
+              <div class="form-grid">
+                <div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="e.g. Bonolo" autocomplete="name"></div>
+                <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" required placeholder="e.g. 081 234 5678" autocomplete="tel"></div>
+                <div class="field full"><label for="service">Service needed</label><select id="service" name="service" required><option value="" selected disabled>Select a service</option><option>Electrical</option><option>Plumbing</option><option>Solar geyser installation</option><option>Security & CCTV</option><option>Emergency call-out</option><option>Other / not sure</option></select></div>
+                <div class="field full"><label for="message">Brief description</label><textarea id="message" name="message" required placeholder="Tell us what needs to be installed, repaired, inspected or assessed."></textarea></div>
+              </div>
+              <div class="form-actions"><button class="btn btn-primary" type="submit">Send via WhatsApp ↗</button><button class="btn btn-secondary" id="emailBtn" type="button">Send via Email ↗</button></div>
+              <p class="form-note">Submitting this form does not store your details on the website. It prepares a message for WhatsApp or your email app.</p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M5 33 20 18l12 10 12-12 15 17" fill="none" stroke="#2a86ff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 34h50" stroke="#ff4d52" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="20" cy="18" r="5" fill="#ff4d52"/><path d="M42 37 47 29l5 8-5 9Z" fill="#f2a900"/>
+            </svg>
+            <span class="brand-copy"><strong>MR Electrical & Plumbing</strong><span>Solutions (Pty) Ltd</span></span>
+          </div>
+          <p style="margin-top:15px;max-width:490px">Professional electrical and plumbing solutions, with solar geyser and security/CCTV services. Proudly serving Pretoria, Johannesburg and surrounding areas.</p>
+        </div>
+        <div><h3>Explore</h3><div class="footer-links"><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#projects">Our Work</a><a href="#process">How We Work</a><a href="#team">Our Team</a><a href="#contact">Get in Touch</a></div></div>
+        <div><h3>Contact</h3><div class="footer-links"><a href="tel:+27812140657">081-214-0657</a><a href="tel:+27716372553">071-637-2553</a><a href="mailto:Mrelectricalandplumbing@outlook.com">Mrelectricalandplumbing@outlook.com</a><a href="https://wa.me/27812140657" target="_blank" rel="noopener">WhatsApp</a></div></div>
+      </div>
+      <div class="footer-bottom"><span class="legal">© <span id="year"></span> MR Electrical & Plumbing Solutions (Pty) Ltd. All rights reserved.</span><span class="legal">CIPC Reg. No. 2026/083265/07 • SARS Registered • B-BBEE Compliant</span></div>
+    </div>
+  </footer>
+
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project photo viewer" aria-hidden="true">
+    <div class="lightbox-panel">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close photo viewer">×</button>
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption"><strong id="lightboxTitle"></strong><span id="lightboxCategory"></span></div>
+    </div>
+  </div>
+
+  <div class="mobile-bar" aria-label="Mobile contact actions"><a href="tel:+27812140657">☎ Call Us</a><a href="https://wa.me/27812140657" target="_blank" rel="noopener">◉ WhatsApp</a></div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const year = document.getElementById('year');
+    year.textContent = new Date().getFullYear();
+
+    menuBtn?.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+
+    navLinks?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Open menu');
+    }));
+
+    const getFormData = () => ({
+      name: document.getElementById('name').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      service: document.getElementById('service').value,
+      message: document.getElementById('message').value.trim()
+    });
+
+    document.getElementById('quoteForm')?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const {name, phone, service, message} = getFormData();
+      const text = `Hello MR Electrical & Plumbing Solutions. I would like to request a quotation.%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AService: ${encodeURIComponent(service)}%0ADescription: ${encodeURIComponent(message)}`;
+      window.open(`https://wa.me/27812140657?text=${text}`, '_blank', 'noopener');
+    });
+
+    document.getElementById('emailBtn')?.addEventListener('click', () => {
+      const {name, phone, service, message} = getFormData();
+      const subject = encodeURIComponent(`Quote Request - ${service || 'Service'}`);
+      const body = encodeURIComponent(`Hello MR Electrical & Plumbing Solutions,\n\nI would like to request a quotation.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nDescription: ${message}\n\nThank you.`);
+      window.location.href = `mailto:Mrelectricalandplumbing@outlook.com?subject=${subject}&body=${body}`;
+    });
+
+
+    // Project photo filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryCards = document.querySelectorAll('.gallery-card');
+    filterButtons.forEach(btn => btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      filterButtons.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+      galleryCards.forEach(card => {
+        card.classList.toggle('is-hidden', filter !== 'all' && card.dataset.category !== filter);
+      });
+    }));
+
+    // Accessible photo lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxCategory = document.getElementById('lightboxCategory');
+    const lightboxClose = document.getElementById('lightboxClose');
+    let lastTrigger = null;
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+      if(lastTrigger) lastTrigger.focus();
+    };
+    document.querySelectorAll('[data-lightbox]').forEach(btn => btn.addEventListener('click', () => {
+      lastTrigger = btn;
+      lightboxImg.src = btn.dataset.src;
+      lightboxImg.alt = btn.dataset.title;
+      lightboxTitle.textContent = btn.dataset.title;
+      lightboxCategory.textContent = btn.dataset.category;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      lightboxClose.focus();
+    }));
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', event => { if(event.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', event => {
+      if(event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+    });
+
+  </script>
+</body>
+</html>
