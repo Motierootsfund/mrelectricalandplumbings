@@ -37,7 +37,7 @@ mr-electrical-plumbing-site/
 - No external frameworks and no build command required.
 
 ## Important: the photos ARE part of the website
-The photographs are stored as separate optimized `.webp` files inside the `images/` folder. They are not embedded into `index.html`, so the HTML stays lightweight while the website still displays the real company photos.
+The photographs are stored as separate optimized `.webp` files inside the `images/` folder. They are not embedded into `index.html`, so the HTML stays lightweight while the website still displays the required imagery.
 
 GitHub can store these image files normally. Each image in this package is well below GitHub's browser-upload file-size limit, and the complete site is small enough for a normal repository.
 
@@ -63,15 +63,14 @@ The final repository should look like the project structure shown above.
 - B-BBEE Compliant
 - Service areas: Pretoria, Johannesburg and surrounding areas
 - Email: Mrelectricalandplumbing@outlook.com
-- Phone: 081-214-0657 / 071-637-2553
+- Phone: 072-099-5095 / 071-637-2553
 - Services: electrical, plumbing, solar geyser installations, security & CCTV
 
 ## Contact behavior
 - Phone buttons open the phone dialer.
-- WhatsApp buttons open a pre-filled WhatsApp message to 081-214-0657.
+- WhatsApp buttons open a pre-filled WhatsApp message to 072-099-5095.
 - The quote form can open WhatsApp or the visitor's default email app.
 - No server-side database or form service is required.
-
 
 ## Company profile
 The website includes `MR-Electrical-Plumbing-Company-Profile.pdf` in the same root folder as `index.html`. The **View Company Profile** buttons open the profile in a new browser tab on Vercel.
